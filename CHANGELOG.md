@@ -14,7 +14,7 @@ in_this_file_we_have: [OVERVIEW, VERSION_3_7_1, VERSION_3_7_0, REFERENCES]
 
 This file tracks the GPL Sales Syntax lineage that now ships inside LUPOPEDIA. The livehelp module (Crafty Syntax → Sales Syntax → LUPOPEDIA) remains open source and fully documented so customers know which fixes landed in each release.
 
-**License**: GPL v3.0 + Apache 2.0 dual licensing under LUPOPEDIA LLC  
+**License**: GPL v3.0  under LUPOPEDIA LLC  
 **Program Scope**: Human operator live help with layered popups, channel routing, canned replies, and visitor tracking.
 
 ---
@@ -401,5 +401,6 @@ This file tracks the GPL Sales Syntax lineage that now ships inside LUPOPEDIA. T
 ---
 
 > Historical Note: For release notes covering **2002-12-21 through 2012-03-07**, refer to the original `README_FILES/` changelog bundled with each Sales Syntax installation.
+
 
 
