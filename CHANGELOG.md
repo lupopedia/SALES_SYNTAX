@@ -14,8 +14,32 @@ in_this_file_we_have: [OVERVIEW, VERSION_3_7_1, VERSION_3_7_0, REFERENCES]
 
 This file tracks the GPL Sales Syntax lineage that now ships inside LUPOPEDIA. The livehelp module (Crafty Syntax → Sales Syntax → LUPOPEDIA) remains open source and fully documented so customers know which fixes landed in each release.
 
-**License**: GPL v3.0  under LUPOPEDIA LLC  
+**License**: GPL v3.0 + Apache 2.0 dual licensing under LUPOPEDIA LLC  
 **Program Scope**: Human operator live help with layered popups, channel routing, canned replies, and visitor tracking.
+
+---
+
+## VERSION_3_7_2 — 2025-11-10 (Installatron Compliance & Branding Refresh)
+
+### Highlights
+
+- Rebased the working tree on the original 3.7.1 payload (`public/salessyntax/`) so all new fixes start from the shipped, unmodified theme.
+- Retired the legacy `filter_html()` sanitizer and swapped every call site to native escaping helpers (`cslh_escape`, `htmlspecialchars`, `rawurlencode`) to eliminate double-sanitization flags raised by Installatron.
+- Modernized the visitor typing beacon in `livehelp.php` (and mirrored scripts) to prefer `fetch`/`XMLHttpRequest` while keeping the `<img>`/`GETForm` fallbacks for browsers stuck in 2005.
+- Removed obsolete upgrade prompts (`pp.gif`, `gopro.png`, “Go Pro” copy) now that unbranded features ship by default.
+- Updated footer credits across operator/admin pages to read: `Sales Syntax Live Help 2003 - 2025 ( a product of Lupopedia LLC )`.
+- Added an opt-in `2025_modern` theme (responsive layout, flex-based header/footer, refreshed offline/connecting screens) without disturbing existing templates.
+- Mobile and iPhone operator consoles now submit chats through modern `fetch` with `GETForm2` fallback, keeping the `postmessage` workflow intact for legacy browsers.
+- Logged the remediation plan in `plan_for_sales_syntax_3_7_2.md` so future patches stay aligned with Installatron requirements.
+- Introduced hosted documentation stubs (`howto`, `qa`, `updates`) and new public landing pages (`account.php`, `support.php`, `directory.php`, `members.php`). Added an operator-facing notice on `scratch.php` explaining why the 3.7.2 release preserves the 2012-era UI (to keep diff baselines intact) and how LUPOPEDIA 1.0.0 will layer in modern tooling plus AI-driven migration of community customizations.
+- Refreshed `javascript/xmlhttp.js` to use a shared `fetch` wrapper with automatic fallbacks to the legacy `GETForm` helpers, keeping polling/typing scripts functional on older browsers while modern installs run via `fetch`.
+- Packaging/testing: preparing the clean 3.7.2 ZIP and verifying shared-host installs with the modernized AJAX pathways.
+- Updated configuration helpers so generated URLs drop the domain entirely (always relative paths). This avoids mixed-content issues—legacy installs that were `http://` now call AJAX endpoints over the current scheme (`https://` when needed) without breaking.
+
+### Status
+
+- **Release in preparation**: Regression testing and packaging still pending before tagging 3.7.2.
+- **Next steps**: Mirror the modern typing helpers into mobile/iPhone/external clients, refresh shared `xmlhttp.js`, and produce Installatron-ready ZIP + changelog.
 
 ---
 
@@ -401,6 +425,5 @@ This file tracks the GPL Sales Syntax lineage that now ships inside LUPOPEDIA. T
 ---
 
 > Historical Note: For release notes covering **2002-12-21 through 2012-03-07**, refer to the original `README_FILES/` changelog bundled with each Sales Syntax installation.
-
 
 
