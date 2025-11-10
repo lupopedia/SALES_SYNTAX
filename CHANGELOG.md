@@ -13,6 +13,12 @@ superpositionally: ["FILEID_SALES_SYNTAX_CHANGELOG"]
 
 # Sales Syntax Release Highlights
 
+### v3.7.3 — 2025-11-10
+- Repaired the `livehelp_config.offest` typo by removing the column from new installs, adding tolerant loaders for upgrades, and providing safe timezone fallbacks in `config_cslh.php` and the admin UI.
+- Hardened shared-host deployments: sanitised mobile/iPhone operator settings, escaped the `see` redirect parameter, centralised trusted language loading, cleaned layer invite imagemaps, and restored reliable admin alert focus/sound behaviour.
+- Standardised all powered-by links to `https://lupopedia.com/?utm_source=poweredby&utm_campaign=poweredby` and refreshed `htmltags.php` messaging to emphasise same-domain embeds.
+- Completed end-to-end verification (fresh install, upgrade, debug regression, security_sweep.py), packaging the release as `salessyntax-3.7.3.zip`.
+
 ### v3.7.2 — 2025-11-10
 - Shared AJAX helpers (`javascript/xmlhttp.js`) now prefer `fetch` with automatic fallbacks to legacy `GETForm` calls, keeping older browsers working while modern installs avoid mixed-content warnings.
 - Hosted documentation and landing pages included (`howto`, `qa`, `updates`, `account`, `support`, `directory`, `members`) so offline/shared-host installs have a local help bundle.
