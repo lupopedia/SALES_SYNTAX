@@ -15,11 +15,11 @@ superpositionally: ["FILEID_SALES_SYNTAX_UPGRADE_NOTES"]
 
 ## OVERVIEW
 
-Sales Syntax 3.7.1 ships inside LUPOPEDIA as the human-operator channel layer. PORTUNUS (the migration steward) automates the upgrade path so legacy installations can move into LUPOPEDIA without losing transcripts, departments, or operator workflows.
+Sales Syntax 3.7.2 ships inside LUPOPEDIA as the human-operator channel layer. PORTUNUS (the migration steward) automates the upgrade path so legacy installations can move into LUPOPEDIA without losing transcripts, departments, or operator workflows.
 
 ## PREPARE
 
-1. **Patch to 3.7.1** – apply the security update before beginning.  
+1. **Patch to 3.7.2** – apply the security update before beginning.  
 2. **Snapshot** – run your existing backup routine (database + attachments).  
 3. **Generate CSV bundle** – optional but recommended: export tables to CSV for auditing.  
 4. **Capture credentials** – database host, username, password, schema name, and file paths.

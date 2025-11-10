@@ -15,5 +15,6 @@ superpositionally: ["FILEID_SALES_SYNTAX_DOCS_README"]
 
 - `LUPOPEDIA_UPGRADE_NOTES.md` – step-by-step guide for migrating into LUPOPEDIA v0.1.x.  
 - `CHANGELOG.md` (root) – high-level summary of Sales Syntax releases.  
+- `database/schema/` – SQL schema snapshot (3.7.1) generated from the legacy bundle.  
 - Historical documentation lives under `public/README_FILES/` (original GPL bundle).
 
